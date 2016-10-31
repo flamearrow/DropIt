@@ -7,21 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		22014A1F1DC70BDB007F90CE /* FallingObjectBehavior.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22014A1E1DC70BDB007F90CE /* FallingObjectBehavior.swift */; };
 		227FC3991DC7014E00A1CF8F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227FC3981DC7014E00A1CF8F /* AppDelegate.swift */; };
-		227FC39B1DC7014E00A1CF8F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227FC39A1DC7014E00A1CF8F /* ViewController.swift */; };
 		227FC39E1DC7014E00A1CF8F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 227FC39C1DC7014E00A1CF8F /* Main.storyboard */; };
 		227FC3A01DC7014E00A1CF8F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 227FC39F1DC7014E00A1CF8F /* Assets.xcassets */; };
 		227FC3A31DC7014E00A1CF8F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 227FC3A11DC7014E00A1CF8F /* LaunchScreen.storyboard */; };
+		227FC3AC1DC701E200A1CF8F /* DropItView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227FC3AB1DC701E200A1CF8F /* DropItView.swift */; };
+		227FC3AE1DC701F400A1CF8F /* DropItViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227FC3AD1DC701F400A1CF8F /* DropItViewController.swift */; };
+		227FC3B01DC703EF00A1CF8F /* UIKitExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227FC3AF1DC703EF00A1CF8F /* UIKitExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		22014A1E1DC70BDB007F90CE /* FallingObjectBehavior.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FallingObjectBehavior.swift; sourceTree = "<group>"; };
 		227FC3951DC7014E00A1CF8F /* DropIt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DropIt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		227FC3981DC7014E00A1CF8F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		227FC39A1DC7014E00A1CF8F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		227FC39D1DC7014E00A1CF8F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		227FC39F1DC7014E00A1CF8F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		227FC3A21DC7014E00A1CF8F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		227FC3A41DC7014E00A1CF8F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		227FC3AB1DC701E200A1CF8F /* DropItView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DropItView.swift; sourceTree = "<group>"; };
+		227FC3AD1DC701F400A1CF8F /* DropItViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DropItViewController.swift; sourceTree = "<group>"; };
+		227FC3AF1DC703EF00A1CF8F /* UIKitExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIKitExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +60,25 @@
 		227FC3971DC7014E00A1CF8F /* DropIt */ = {
 			isa = PBXGroup;
 			children = (
-				227FC3981DC7014E00A1CF8F /* AppDelegate.swift */,
-				227FC39A1DC7014E00A1CF8F /* ViewController.swift */,
+				227FC3AA1DC701C200A1CF8F /* supported files */,
 				227FC39C1DC7014E00A1CF8F /* Main.storyboard */,
+				227FC3AB1DC701E200A1CF8F /* DropItView.swift */,
+				22014A1E1DC70BDB007F90CE /* FallingObjectBehavior.swift */,
+				227FC3AD1DC701F400A1CF8F /* DropItViewController.swift */,
+				227FC3AF1DC703EF00A1CF8F /* UIKitExtension.swift */,
+			);
+			path = DropIt;
+			sourceTree = "<group>";
+		};
+		227FC3AA1DC701C200A1CF8F /* supported files */ = {
+			isa = PBXGroup;
+			children = (
+				227FC3981DC7014E00A1CF8F /* AppDelegate.swift */,
 				227FC39F1DC7014E00A1CF8F /* Assets.xcassets */,
 				227FC3A11DC7014E00A1CF8F /* LaunchScreen.storyboard */,
 				227FC3A41DC7014E00A1CF8F /* Info.plist */,
 			);
-			path = DropIt;
+			name = "supported files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -136,7 +153,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				227FC39B1DC7014E00A1CF8F /* ViewController.swift in Sources */,
+				227FC3AE1DC701F400A1CF8F /* DropItViewController.swift in Sources */,
+				227FC3AC1DC701E200A1CF8F /* DropItView.swift in Sources */,
+				22014A1F1DC70BDB007F90CE /* FallingObjectBehavior.swift in Sources */,
+				227FC3B01DC703EF00A1CF8F /* UIKitExtension.swift in Sources */,
 				227FC3991DC7014E00A1CF8F /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -299,6 +319,7 @@
 				227FC3A91DC7014E00A1CF8F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
