@@ -42,7 +42,8 @@ extension CGRect {
 }
 
 extension UIView {
-    func hitTest(p: CGPoint) -> UIView? {
+    // returns the block that covers this point
+    func hitTest(_ p: CGPoint) -> UIView? {
         return hitTest(p, with: nil)
     }
 }

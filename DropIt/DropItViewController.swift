@@ -13,6 +13,8 @@ class DropItViewController: UIViewController {
         didSet {
             // add gesture recognizer programatically, note it self will be passed as a param to action
             dropItView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(addDrop(recognizer:))))
+            // can #selector to another class's method
+            dropItView.addGestureRecognizer(UIPanGestureRecognizer(target: dropItView, action: #selector(DropItView.grabDrop(recognizer:))))
         }
     }
     

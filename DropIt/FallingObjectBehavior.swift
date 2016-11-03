@@ -10,7 +10,7 @@ import UIKit
 
 class FallingObjectBehavior: UIDynamicBehavior {
     private let gravity = UIGravityBehavior()
-    // don't fall out of bounds
+    // don't fall out of bounds, more boundaries can be added later
     private let collider:UICollisionBehavior = {
         let collider = UICollisionBehavior()
         collider.translatesReferenceBoundsIntoBoundary = true
@@ -19,10 +19,10 @@ class FallingObjectBehavior: UIDynamicBehavior {
     
     private let itemBehavior:UIDynamicItemBehavior = {
         let dib = UIDynamicItemBehavior()
-        // not rotating, y axis won't move
-        dib.allowsRotation = false
+        // if rotating, y axis won't move
+        dib.allowsRotation = true
         // energy loss, how much it's going to bounce back
-        dib.elasticity = 0.75
+        dib.elasticity = 0.05
         return dib
     }()
     
@@ -31,6 +31,11 @@ class FallingObjectBehavior: UIDynamicBehavior {
         addChildBehavior(gravity)
         addChildBehavior(collider)
         addChildBehavior(itemBehavior)
+    }
+    
+    func addBarrier(path: UIBezierPath, name:String) {
+        collider.removeBoundary(withIdentifier: name as NSCopying)
+        collider.addBoundary(withIdentifier: name as NSCopying, for: path)
     }
     
     func addItem(_ item:UIDynamicItem) {
