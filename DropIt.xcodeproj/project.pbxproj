@@ -15,6 +15,7 @@
 		227FC3AC1DC701E200A1CF8F /* DropItView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227FC3AB1DC701E200A1CF8F /* DropItView.swift */; };
 		227FC3AE1DC701F400A1CF8F /* DropItViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227FC3AD1DC701F400A1CF8F /* DropItViewController.swift */; };
 		227FC3B01DC703EF00A1CF8F /* UIKitExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227FC3AF1DC703EF00A1CF8F /* UIKitExtension.swift */; };
+		2281F37D1DCAFC5D00C23532 /* NamedBezierPathView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2281F37C1DCAFC5D00C23532 /* NamedBezierPathView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		227FC3AB1DC701E200A1CF8F /* DropItView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DropItView.swift; sourceTree = "<group>"; };
 		227FC3AD1DC701F400A1CF8F /* DropItViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DropItViewController.swift; sourceTree = "<group>"; };
 		227FC3AF1DC703EF00A1CF8F /* UIKitExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIKitExtension.swift; sourceTree = "<group>"; };
+		2281F37C1DCAFC5D00C23532 /* NamedBezierPathView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NamedBezierPathView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				227FC3AA1DC701C200A1CF8F /* supported files */,
 				227FC39C1DC7014E00A1CF8F /* Main.storyboard */,
 				227FC3AB1DC701E200A1CF8F /* DropItView.swift */,
+				2281F37C1DCAFC5D00C23532 /* NamedBezierPathView.swift */,
 				22014A1E1DC70BDB007F90CE /* FallingObjectBehavior.swift */,
 				227FC3AD1DC701F400A1CF8F /* DropItViewController.swift */,
 				227FC3AF1DC703EF00A1CF8F /* UIKitExtension.swift */,
@@ -153,6 +156,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2281F37D1DCAFC5D00C23532 /* NamedBezierPathView.swift in Sources */,
 				227FC3AE1DC701F400A1CF8F /* DropItViewController.swift in Sources */,
 				227FC3AC1DC701E200A1CF8F /* DropItView.swift in Sources */,
 				22014A1F1DC70BDB007F90CE /* FallingObjectBehavior.swift in Sources */,
