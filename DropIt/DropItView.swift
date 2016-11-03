@@ -55,7 +55,6 @@ class DropItView: NamedBezierPathView, UIDynamicAnimatorDelegate {
                         attachment = UIAttachmentBehavior(item: dropToAttachTo, attachedToAnchor: gesturePoint)
                     }
                     lastDrop = nil
-
                 }
             // when dragged
             case .changed:

@@ -10,11 +10,19 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "DropIt/DropItView.swift"
+<<<<<<< HEAD
             timestampString = "499843803.201466"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "50"
             endingLineNumber = "50"
+=======
+            timestampString = "499843645.007946"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "49"
+            endingLineNumber = "49"
+>>>>>>> 433be03e24a3b763d3f7974b258b9af910ff5795
             landmarkName = "grabDrop(recognizer:)"
             landmarkType = "7">
          </BreakpointContent>
