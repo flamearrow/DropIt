@@ -15,6 +15,7 @@ class DropItViewController: UIViewController {
             dropItView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(addDrop(recognizer:))))
             // can #selector to another class's method
             dropItView.addGestureRecognizer(UIPanGestureRecognizer(target: dropItView, action: #selector(DropItView.grabDrop(recognizer:))))
+            dropItView.realGravity = true
         }
     }
     

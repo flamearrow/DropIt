@@ -7,9 +7,46 @@
 //
 
 import UIKit
+import CoreMotion
 
 class DropItView: NamedBezierPathView, UIDynamicAnimatorDelegate {
     private let dropBehavior = FallingObjectBehavior()
+    var realGravity:Bool = false {
+        didSet {
+            updateRealGravity()
+        }
+    }
+    
+    // grab acceleoremter information
+    private let motionManager = CMMotionManager()
+    
+    private func updateRealGravity() {
+        if realGravity {
+            if motionManager.isAccelerometerAvailable && !motionManager.isAccelerometerActive {
+                // capture data every 0.25 seond
+                motionManager.accelerometerUpdateInterval = 0.25
+                // start capturing
+                motionManager.startAccelerometerUpdates(to: OperationQueue.main)
+                { [unowned self] (data, error) in
+                    // if it's not animating, don't grab gravity
+                    if self.dropBehavior.dynamicAnimator != nil {
+                        if var dx = data?.acceleration.x, var dy = data?.acceleration.y {
+                            switch UIDevice.current.orientation {
+                            case .portrait: dy = -dy
+                            case .portraitUpsideDown: break
+                            case .landscapeRight: swap(&dx, &dy)
+                            case .landscapeLeft: swap(&dx, &dy); dy = -dy
+                            default: dx = 0; dy = 0
+                            }
+                            self.dropBehavior.gravity.gravityDirection = CGVector(dx: dx, dy: dy)
+                        }
+                    }
+                }
+            }
+        } else {
+            motionManager.stopAccelerometerUpdates()
+        }
+    }
     
     private lazy var animator:UIDynamicAnimator = {
         let animator = UIDynamicAnimator(referenceView: self)
@@ -74,6 +111,7 @@ class DropItView: NamedBezierPathView, UIDynamicAnimatorDelegate {
             // start and stop animating by add/remove the behaviors
             if animating {
                 animator.addBehavior(dropBehavior)
+                updateRealGravity()
             } else {
                 animator.removeBehavior(dropBehavior)
             }
